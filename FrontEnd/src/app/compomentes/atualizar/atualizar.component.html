@@ -1,0 +1,23 @@
+<section class="container">
+    <div class="row">
+        <div>
+            <form>
+                <div class="mb-3">
+                    <label for="form-label">Nome</label>
+                    <input [(ngModel)]="usuario.nome" type="text" class="form-control" name="nome" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="form-label">E-mail</label>
+                    <input [(ngModel)]="usuario.email" type="text" class="form-control" name="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="form-label">Senha</label>
+                    <input [(ngModel)]="usuario.senha" type="text" class="form-control" name="senha">
+                </div>
+                <button class="btn btn-primary" (click)="atualizar()">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</section>

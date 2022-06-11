@@ -1,0 +1,45 @@
+<section class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label for="form-label">ID</label>
+                    <input [(ngModel)]="usuario.idusuario" type="text" class="form-control" name="idusuario">
+                </div>
+
+                <div class="mb-3">
+                    <label for="form-label">Nome</label>
+                    <input [(ngModel)]="usuario.nome" type="text" class="form-control" name="nome">
+                </div>
+
+                <div class="mb-3">
+                    <label for="form-label">E-mail</label>
+                    <input [(ngModel)]="usuario.email" type="text" class="form-control" name="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="form-label">Senha</label>
+                    <input [(ngModel)]="usuario.senha" type="text" class="form-control" name="senha">
+                </div>
+                <button class="btn btn-primary" (click)="adicionar()">Adicionar</button>
+            </form>
+        </div>
+
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label for="form-label">{{usuario.nome}}</label>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form-label">{{usuario.email}}</label>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="form-label">{{usuario.senha}}</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
