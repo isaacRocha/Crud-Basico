@@ -2,7 +2,7 @@ const router = require('express').Router();
 const client = require('./config/conexao');
 
 
-router.get('/', (req, res) => {
+router.get('/usuario', (req, res) => {
     let sql = 'select * from usuario';
     client.query(sql, (err, rows) => {
         if (err) {
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 
 })
 
-router.get('/:id', (req, res) => {
+router.get('/usuario/:id', (req, res) => {
     let sql = `select * from usuario where idUsuario = ${req.params.id}`
     client.query(sql, (err, rows) => {
         if (err) {
@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
 });
 
 
-router.post('/', (req, res) => {
+router.post('/usuario', (req, res) => {
     const user = req.body;
 
     let sql = `insert into usuario(idusuario, nome, email, senha )
@@ -42,7 +42,7 @@ router.post('/', (req, res) => {
 
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/usuario/:id', (req, res) => {
     let sql = `delete from usuario where idusuario = ${req.params.id}`;
     client.query(sql, (err, rows) => {
         if (err) {
@@ -54,7 +54,7 @@ router.delete('/:id', (req, res) => {
 });
 
 
-router.put('/:id', (req, res) => {
+router.put('/usuario/:id', (req, res) => {
     const {id} = req.params;
     const {nome, email, senha} = req.body;
 
