@@ -1,7 +1,7 @@
 require(__dirname+'/backend/config/conexao');
 
 const express = require('express');
-const port = (process.env.port || 3000);
+const PORT = process.env.PORT || 3000;
 
 //express 
 const app = express();
@@ -15,7 +15,7 @@ app.get('/*',(req,res)=>{
 
 
 //config
-app.set('port',port);
+app.set('port',PORT);
 
 //rotas
 app.use('/api',require(__dirname +'/backend/rotas'));
