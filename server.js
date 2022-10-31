@@ -14,18 +14,13 @@ app.get('/*',(req,res)=>{
 })
 
 
-//config
-app.set('port',PORT);
+
 
 //rotas
 app.use('/api',require(__dirname +'/backend/rotas'));
 
 //iniciar express 
 
-app.listen(app.get('port'),(error)=>{
-    if(error){
-        console.log('erro' + error)
-    }else{
-        console.log("...")
-    }
+app.listen(PORT, ()=>{
+    console.log('servidor no ar'+PORT)
 })
