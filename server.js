@@ -13,9 +13,6 @@ app.get('/*',(req,res)=>{
     res.sendFile(__dirname+'/dist/front-end/index.html')
 })
 
-
-
-
 //rotas
 app.use('/api',require(__dirname +'/backend/rotas'));
 
